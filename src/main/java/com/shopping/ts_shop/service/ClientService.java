@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -32,10 +33,10 @@ public class ClientService {
     @Transactional
     public Cliente atualizar(Long id, Cliente clienteAtualizado) {
         return clienteRepository.findById(id).map(cliente -> {
-            cliente.setNome(clienteAtualizado.getNome());
-            cliente.setEmail(clienteAtualizado.getEmail());
-            cliente.setTelefone(clienteAtualizado.getTelefone());
-            cliente.setEndereco(clienteAtualizado.getEndereco());
+            cliente.setNome(clienteAtualizado.getEmail().isEmpty() ? cliente.getNome() : clienteAtualizado.getNome());
+            cliente.setEmail(clienteAtualizado.getEmail().isEmpty() ? cliente.getEmail()  : clienteAtualizado.getEmail());
+            cliente.setTelefone(clienteAtualizado.getTelefone().isEmpty() ? cliente.getTelefone() : clienteAtualizado.getTelefone());
+            cliente.setEndereco(clienteAtualizado.getEndereco().isEmpty() ?  cliente.getEndereco() : clienteAtualizado.getEndereco());
             return clienteRepository.save(cliente);
         }).orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
     }

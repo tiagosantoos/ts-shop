@@ -24,7 +24,6 @@ public class Cliente {
 
     @NotBlank(message = "O e-mail é obrigatório")
     @Email(message = "E-mail inválido")
-    @Column(unique = true, nullable = false)
     private String email;
 
     @NotBlank(message = "O telefone é obrigatório")
