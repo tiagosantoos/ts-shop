@@ -1,5 +1,6 @@
 package com.shopping.ts_shop.service;
 
+import com.shopping.ts_shop.model.Cliente;
 import com.shopping.ts_shop.model.Produto;
 import com.shopping.ts_shop.repository.ProdutoRepository;
 import jakarta.transaction.Transactional;
@@ -46,5 +47,9 @@ public class ProdutoService {
 
     public Long count() {
         return produtoRepository.count();
+    }
+
+    public List<Produto> buscarPorNome(String nome) {
+        return produtoRepository.findByNomeContainingIgnoreCase(nome);
     }
 }

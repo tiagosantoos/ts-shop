@@ -1,5 +1,6 @@
 package com.shopping.ts_shop.controller;
 
+import com.shopping.ts_shop.model.Cliente;
 import com.shopping.ts_shop.model.Produto;
 import com.shopping.ts_shop.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,5 +50,10 @@ public class ProdutoController {
     @GetMapping("/count")
     public ResponseEntity<Long> count() {
         return ResponseEntity.ok(produtoService.count());
+    }
+
+    @GetMapping("/nome/{nome}")
+    public ResponseEntity<List<Produto>> buscarPorNome(@PathVariable String nome) {
+        return ResponseEntity.ok(produtoService.buscarPorNome(nome));
     }
 }
