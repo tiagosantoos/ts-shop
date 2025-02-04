@@ -43,4 +43,8 @@ public class ProdutoService {
     public void excluir(Long id) {
         produtoRepository.deleteById(id);
     }
+
+    public Long count() {
+        return produtoRepository.count();
+    }
 }

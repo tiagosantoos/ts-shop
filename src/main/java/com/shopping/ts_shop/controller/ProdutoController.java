@@ -45,4 +45,9 @@ public class ProdutoController {
         produtoService.excluir(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/count")
+    public ResponseEntity<Long> count() {
+        return ResponseEntity.ok(produtoService.count());
+    }
 }

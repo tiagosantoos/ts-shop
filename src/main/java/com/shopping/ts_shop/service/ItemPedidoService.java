@@ -68,4 +68,8 @@ public class ItemPedidoService {
     public void excluir(Long id) {
         itemPedidoRepository.deleteById(id);
     }
+
+    public Long count() {
+        return itemPedidoRepository.count();
+    }
 }
