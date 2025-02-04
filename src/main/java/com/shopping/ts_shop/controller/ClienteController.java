@@ -40,6 +40,11 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.atualizar(id, cliente));
     }
 
+    @PutMapping("/count")
+    public ResponseEntity<Long> count() {
+        return ResponseEntity.ok(clienteService.count());
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> excluir(@PathVariable Long id) {
         clienteService.excluir(id);

@@ -25,6 +25,10 @@ public class ClientService {
         return clienteRepository.findById(id);
     }
 
+    public Long count() {
+        return clienteRepository.count();
+    }
+
     @Transactional
     public Cliente criar(Cliente cliente) {
         return clienteRepository.save(cliente);
