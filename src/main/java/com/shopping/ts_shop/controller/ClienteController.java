@@ -30,6 +30,11 @@ public class ClienteController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/nome/{nome}")
+    public ResponseEntity<List<Cliente>> buscarPorNome(@PathVariable String nome) {
+        return ResponseEntity.ok(clienteService.buscarPorNome(nome));
+    }
+
     @PostMapping
     public ResponseEntity<Cliente> criar(@Valid @RequestBody Cliente cliente) {
         return ResponseEntity.ok(clienteService.criar(cliente));

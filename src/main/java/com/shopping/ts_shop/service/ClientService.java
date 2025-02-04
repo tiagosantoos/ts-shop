@@ -25,6 +25,10 @@ public class ClientService {
         return clienteRepository.findById(id);
     }
 
+    public List<Cliente> buscarPorNome(String nome) {
+        return clienteRepository.findByNomeContainingIgnoreCase(nome);
+    }
+
     public Long count() {
         return clienteRepository.count();
     }
