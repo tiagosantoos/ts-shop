@@ -39,6 +39,11 @@ public class PedidoController {
         return ResponseEntity.ok(pedidoService.atualizar(id, pedido));
     }
 
+    @GetMapping("/count")
+    public ResponseEntity<Long> count() {
+        return ResponseEntity.ok(pedidoService.count());
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> excluir(@PathVariable Long id) {
         pedidoService.excluir(id);

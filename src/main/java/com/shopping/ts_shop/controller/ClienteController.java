@@ -40,7 +40,7 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.atualizar(id, cliente));
     }
 
-    @PutMapping("/count")
+    @GetMapping("/count")
     public ResponseEntity<Long> count() {
         return ResponseEntity.ok(clienteService.count());
     }

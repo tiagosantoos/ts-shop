@@ -53,6 +53,11 @@ public class PedidoService {
         pedidoRepository.deleteById(id);
     }
 
+
+    public Long count() {
+        return pedidoRepository.count();
+    }
+
     private BigDecimal calcularTotal(Pedido pedido) {
         return pedido.getItens().stream()
                 .map(ItemPedido::getSubtotal)
