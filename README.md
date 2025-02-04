@@ -54,6 +54,7 @@ Este projeto é um **Sistema de Gestão de Pedidos** desenvolvido com **Spring B
 
 ## 📌 Endpoints da API
 ### 🛠️ Cliente
+- **`GET /clientes/count`** → Obtém a quantidade de registro
 - **`GET /clientes`** → Lista todos os clientes
 - **`GET /clientes/{id}`** → Obtém um cliente por ID
 - **`POST /clientes`** → Cria um novo cliente
@@ -61,6 +62,7 @@ Este projeto é um **Sistema de Gestão de Pedidos** desenvolvido com **Spring B
 - **`DELETE /clientes/{id}`** → Remove um cliente
 
 ### 📦 Produto
+- **`GET /produtos/count`** → Obtém a quantidade de registro
 - **`GET /produtos`** → Lista todos os produtos
 - **`GET /produtos/{id}`** → Obtém um produto por ID
 - **`POST /produtos`** → Cadastra um novo produto
@@ -68,6 +70,7 @@ Este projeto é um **Sistema de Gestão de Pedidos** desenvolvido com **Spring B
 - **`DELETE /produtos/{id}`** → Remove um produto
 
 ### 🛒 Pedido
+- **`GET /pedidos/count`** → Obtém a quantidade de registro
 - **`GET /pedidos`** → Lista todos os pedidos
 - **`GET /pedidos/{id}`** → Obtém um pedido por ID
 - **`POST /pedidos`** → Cria um novo pedido
@@ -75,6 +78,7 @@ Este projeto é um **Sistema de Gestão de Pedidos** desenvolvido com **Spring B
 - **`DELETE /pedidos/{id}`** → Remove um pedido
 
 ### 📄 ItemPedido
+- **`GET /itens-pedido/count`** → Obtém a quantidade de registro
 - **`GET /itens-pedido`** → Lista todos os itens de pedidos
 - **`GET /itens-pedido/{id}`** → Obtém um item por ID
 - **`POST /itens-pedido`** → Adiciona um item a um pedido
