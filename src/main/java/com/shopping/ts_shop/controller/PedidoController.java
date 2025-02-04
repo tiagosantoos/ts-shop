@@ -1,6 +1,7 @@
 package com.shopping.ts_shop.controller;
 
 import com.shopping.ts_shop.model.Pedido;
+import com.shopping.ts_shop.model.Produto;
 import com.shopping.ts_shop.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -48,5 +49,10 @@ public class PedidoController {
     public ResponseEntity<Void> excluir(@PathVariable Long id) {
         pedidoService.excluir(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/nome/{nome}")
+    public ResponseEntity<List<Pedido>> buscarPorNome(@PathVariable String nome) {
+        return ResponseEntity.ok(pedidoService.buscarPorNome(nome));
     }
 }

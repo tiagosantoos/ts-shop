@@ -3,6 +3,7 @@ package com.shopping.ts_shop.service;
 import com.shopping.ts_shop.model.Cliente;
 import com.shopping.ts_shop.model.ItemPedido;
 import com.shopping.ts_shop.model.Pedido;
+import com.shopping.ts_shop.model.Produto;
 import com.shopping.ts_shop.repository.ClienteRepository;
 import com.shopping.ts_shop.repository.PedidoRepository;
 import jakarta.transaction.Transactional;
@@ -62,6 +63,10 @@ public class PedidoService {
         return pedido.getItens().stream()
                 .map(ItemPedido::getSubtotal)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
+    public List<Pedido> buscarPorNome(String nome) {
+        return pedidoRepository.findByClienteNomeContainingIgnoreCase(nome);
     }
 
 }
