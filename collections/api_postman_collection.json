@@ -1,0 +1,340 @@
+{
+    "info": {
+        "name": "API de Pedidos - Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Listar Clientes",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/clientes",
+                    "host": [
+                        "{{base_url}}/clientes"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Buscar Clientes por ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/clientes/1",
+                    "host": [
+                        "{{base_url}}/clientes/{id}"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Criar Clientes",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"nome\": \"Exemplo nome\",\n    \"email\": \"Exemplo email\",\n    \"telefone\": \"Exemplo telefone\",\n    \"endereco\": \"Exemplo endereco\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/clientes",
+                    "host": [
+                        "{{base_url}}/clientes"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Atualizar Clientes",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"nome\": \"Atualizado nome\",\n    \"email\": \"Atualizado email\",\n    \"telefone\": \"Atualizado telefone\",\n    \"endereco\": \"Atualizado endereco\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/clientes/1",
+                    "host": [
+                        "{{base_url}}/clientes/{id}"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Excluir Clientes",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/clientes/1",
+                    "host": [
+                        "{{base_url}}/clientes/{id}"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Listar Produtos",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/produtos",
+                    "host": [
+                        "{{base_url}}/produtos"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Buscar Produtos por ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/produtos/1",
+                    "host": [
+                        "{{base_url}}/produtos/{id}"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Criar Produtos",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"nome\": \"Exemplo nome\",\n    \"descricao\": \"Exemplo descricao\",\n    \"preco\": \"Exemplo preco\",\n    \"estoque\": \"Exemplo estoque\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/produtos",
+                    "host": [
+                        "{{base_url}}/produtos"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Atualizar Produtos",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"nome\": \"Atualizado nome\",\n    \"descricao\": \"Atualizado descricao\",\n    \"preco\": \"Atualizado preco\",\n    \"estoque\": \"Atualizado estoque\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/produtos/1",
+                    "host": [
+                        "{{base_url}}/produtos/{id}"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Excluir Produtos",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/produtos/1",
+                    "host": [
+                        "{{base_url}}/produtos/{id}"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Listar Pedidos",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/pedidos",
+                    "host": [
+                        "{{base_url}}/pedidos"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Buscar Pedidos por ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/pedidos/1",
+                    "host": [
+                        "{{base_url}}/pedidos/{id}"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Criar Pedidos",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"cliente\": \"Exemplo cliente\",\n    \"status\": \"Exemplo status\",\n    \"total\": \"Exemplo total\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/pedidos",
+                    "host": [
+                        "{{base_url}}/pedidos"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Atualizar Pedidos",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"cliente\": \"Atualizado cliente\",\n    \"status\": \"Atualizado status\",\n    \"total\": \"Atualizado total\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/pedidos/1",
+                    "host": [
+                        "{{base_url}}/pedidos/{id}"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Excluir Pedidos",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/pedidos/1",
+                    "host": [
+                        "{{base_url}}/pedidos/{id}"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Listar Itens-pedido",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/itens-pedido",
+                    "host": [
+                        "{{base_url}}/itens-pedido"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Buscar Itens-pedido por ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/itens-pedido/1",
+                    "host": [
+                        "{{base_url}}/itens-pedido/{id}"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Criar Itens-pedido",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"pedido\": \"Exemplo pedido\",\n    \"produto\": \"Exemplo produto\",\n    \"quantidade\": \"Exemplo quantidade\",\n    \"precoUnitario\": \"Exemplo precoUnitario\",\n    \"subtotal\": \"Exemplo subtotal\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/itens-pedido",
+                    "host": [
+                        "{{base_url}}/itens-pedido"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Atualizar Itens-pedido",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"pedido\": \"Atualizado pedido\",\n    \"produto\": \"Atualizado produto\",\n    \"quantidade\": \"Atualizado quantidade\",\n    \"precoUnitario\": \"Atualizado precoUnitario\",\n    \"subtotal\": \"Atualizado subtotal\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/itens-pedido/1",
+                    "host": [
+                        "{{base_url}}/itens-pedido/{id}"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Excluir Itens-pedido",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/itens-pedido/1",
+                    "host": [
+                        "{{base_url}}/itens-pedido/{id}"
+                    ]
+                }
+            }
+        }
+    ]
+}
